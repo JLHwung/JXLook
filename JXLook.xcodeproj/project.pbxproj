@@ -51,6 +51,8 @@
 		E99A66D22745FB620008848F /* libjxl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E59CBE269C9A4F0036A75E /* libjxl.a */; };
 		E99A66D32745FB620008848F /* libbrotlienc-static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E59CBF269C9A4F0036A75E /* libbrotlienc-static.a */; };
 		E99A66D6274603540008848F /* JXL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FC6E4F25BAD03500A1AAF4 /* JXL.swift */; };
+		E9F34F2F274D853D009FD189 /* ImportExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F34F2E274D853D009FD189 /* ImportExtension.swift */; };
+		E9F34F34274D853D009FD189 /* SpotlightImporter.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E9F34F2C274D853D009FD189 /* SpotlightImporter.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +84,13 @@
 			remoteGlobalIDString = E99A66BC2745FA670008848F;
 			remoteInfo = JXQuickLookThumbnail;
 		};
+		E9F34F32274D853D009FD189 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8573555525B56054005FF7C2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E9F34F2B274D853D009FD189;
+			remoteInfo = SpotlightImporter;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -104,6 +113,7 @@
 			files = (
 				E99A66C82745FA670008848F /* JXQuickLookThumbnail.appex in Embed App Extensions */,
 				85FC6DD525BAC56E00A1AAF4 /* JXQuickLook.appex in Embed App Extensions */,
+				E9F34F34274D853D009FD189 /* SpotlightImporter.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -168,6 +178,11 @@
 		E99A66C42745FA670008848F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E99A66C52745FA670008848F /* JXQuickLookThumbnail.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JXQuickLookThumbnail.entitlements; sourceTree = "<group>"; };
 		E99A66D5274602B30008848F /* JXQuickLookThumbnail-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JXQuickLookThumbnail-Bridging-Header.h"; sourceTree = "<group>"; };
+		E9F34F2C274D853D009FD189 /* SpotlightImporter.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SpotlightImporter.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9F34F2E274D853D009FD189 /* ImportExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportExtension.swift; sourceTree = "<group>"; };
+		E9F34F30274D853D009FD189 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9F34F31274D853D009FD189 /* SpotlightImporter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SpotlightImporter.entitlements; sourceTree = "<group>"; };
+		E9F34F38274D8692009FD189 /* SpotlightImporter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SpotlightImporter-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +248,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E9F34F29274D853D009FD189 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -245,6 +267,7 @@
 				8573557F25B56055005FF7C2 /* JXLookUITests */,
 				85FC6DCB25BAC56E00A1AAF4 /* JXQuickLook */,
 				E99A66C12745FA670008848F /* JXQuickLookThumbnail */,
+				E9F34F2D274D853D009FD189 /* SpotlightImporter */,
 				8573555E25B56054005FF7C2 /* Products */,
 				8573563025B57300005FF7C2 /* Frameworks */,
 			);
@@ -258,6 +281,7 @@
 				8573557C25B56055005FF7C2 /* JXLookUITests.xctest */,
 				85FC6DC825BAC56E00A1AAF4 /* JXQuickLook.appex */,
 				E99A66BD2745FA670008848F /* JXQuickLookThumbnail.appex */,
+				E9F34F2C274D853D009FD189 /* SpotlightImporter.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -387,6 +411,17 @@
 			path = JXQuickLookThumbnail;
 			sourceTree = "<group>";
 		};
+		E9F34F2D274D853D009FD189 /* SpotlightImporter */ = {
+			isa = PBXGroup;
+			children = (
+				E9F34F2E274D853D009FD189 /* ImportExtension.swift */,
+				E9F34F30274D853D009FD189 /* Info.plist */,
+				E9F34F31274D853D009FD189 /* SpotlightImporter.entitlements */,
+				E9F34F38274D8692009FD189 /* SpotlightImporter-Bridging-Header.h */,
+			);
+			path = SpotlightImporter;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -405,6 +440,7 @@
 			dependencies = (
 				85FC6DD425BAC56E00A1AAF4 /* PBXTargetDependency */,
 				E99A66C72745FA670008848F /* PBXTargetDependency */,
+				E9F34F33274D853D009FD189 /* PBXTargetDependency */,
 			);
 			name = JXLook;
 			productName = JXLook;
@@ -481,13 +517,30 @@
 			productReference = E99A66BD2745FA670008848F /* JXQuickLookThumbnail.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		E9F34F2B274D853D009FD189 /* SpotlightImporter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E9F34F35274D853D009FD189 /* Build configuration list for PBXNativeTarget "SpotlightImporter" */;
+			buildPhases = (
+				E9F34F28274D853D009FD189 /* Sources */,
+				E9F34F29274D853D009FD189 /* Frameworks */,
+				E9F34F2A274D853D009FD189 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpotlightImporter;
+			productName = SpotlightImporter;
+			productReference = E9F34F2C274D853D009FD189 /* SpotlightImporter.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		8573555525B56054005FF7C2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1220;
+				LastSwiftUpdateCheck = 1310;
 				LastUpgradeCheck = 1220;
 				TargetAttributes = {
 					8573555C25B56054005FF7C2 = {
@@ -507,6 +560,9 @@
 						LastSwiftMigration = 1220;
 					};
 					E99A66BC2745FA670008848F = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					E9F34F2B274D853D009FD189 = {
 						CreatedOnToolsVersion = 13.1;
 					};
 				};
@@ -529,6 +585,7 @@
 				8573557B25B56055005FF7C2 /* JXLookUITests */,
 				85FC6DC725BAC56E00A1AAF4 /* JXQuickLook */,
 				E99A66BC2745FA670008848F /* JXQuickLookThumbnail */,
+				E9F34F2B274D853D009FD189 /* SpotlightImporter */,
 			);
 		};
 /* End PBXProject section */
@@ -566,6 +623,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		E99A66BB2745FA670008848F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9F34F2A274D853D009FD189 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -621,6 +685,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E9F34F28274D853D009FD189 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9F34F2F274D853D009FD189 /* ImportExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -643,6 +715,11 @@
 			isa = PBXTargetDependency;
 			target = E99A66BC2745FA670008848F /* JXQuickLookThumbnail */;
 			targetProxy = E99A66C62745FA670008848F /* PBXContainerItemProxy */;
+		};
+		E9F34F33274D853D009FD189 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E9F34F2B274D853D009FD189 /* SpotlightImporter */;
+			targetProxy = E9F34F32274D853D009FD189 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1063,6 +1140,58 @@
 			};
 			name = Release;
 		};
+		E9F34F36274D853D009FD189 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SpotlightImporter/SpotlightImporter.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/jpeg-xl/include/**";
+				INFOPLIST_FILE = SpotlightImporter/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SpotlightImporter;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/jpeg-xl/lib";
+				PRODUCT_BUNDLE_IDENTIFIER = org.yllan.JXLook.SpotlightImporter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "SpotlightImporter/SpotlightImporter-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		E9F34F37274D853D009FD189 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SpotlightImporter/SpotlightImporter.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/jpeg-xl/include/**";
+				INFOPLIST_FILE = SpotlightImporter/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SpotlightImporter;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/jpeg-xl/lib";
+				PRODUCT_BUNDLE_IDENTIFIER = org.yllan.JXLook.SpotlightImporter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "SpotlightImporter/SpotlightImporter-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1116,6 +1245,15 @@
 			buildConfigurations = (
 				E99A66C92745FA670008848F /* Debug */,
 				E99A66CA2745FA670008848F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E9F34F35274D853D009FD189 /* Build configuration list for PBXNativeTarget "SpotlightImporter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9F34F36274D853D009FD189 /* Debug */,
+				E9F34F37274D853D009FD189 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
